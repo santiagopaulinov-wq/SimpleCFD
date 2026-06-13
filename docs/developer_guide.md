@@ -49,8 +49,8 @@ Run everything:
 python -m pytest
 ```
 
-The same full suite is executed by GitHub Actions on Python 3.10, 3.11, and
-3.12 after an editable installation and representative CLI checks.
+The same full suite is executed by GitHub Actions on Python 3.11 and 3.12
+after an editable installation and representative CLI checks.
 
 Run focused checks before changing numerical code:
 

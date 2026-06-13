@@ -108,7 +108,7 @@ On macOS or Linux, activate the environment with:
 source .venv/bin/activate
 ```
 
-The package requires Python 3.10 or newer. After installation, it can be
+The package requires Python 3.11 or newer. After installation, it can be
 imported as `simplecfd` and the console script is available as `simplecfd`.
 
 ## Quick Start
@@ -122,8 +122,8 @@ python -m pytest
 ## Continuous Integration
 
 GitHub Actions runs the project quality gate on every push and pull request.
-The CI workflow installs SimpleCFD in editable mode on Python 3.10, 3.11, and
-3.12, verifies imports and CLI entry points, runs representative solver and
+The CI workflow installs SimpleCFD in editable mode on Python 3.11 and 3.12,
+verifies imports and CLI entry points, runs representative solver and
 analytic-benchmark commands, and then executes the full pytest suite.
 
 List available solver cases and coupling methods:

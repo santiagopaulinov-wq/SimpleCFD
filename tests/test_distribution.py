@@ -9,7 +9,7 @@ def test_pyproject_declares_local_distribution_metadata():
     metadata = tomllib.loads(Path("pyproject.toml").read_text(encoding="utf-8"))
 
     assert metadata["project"]["name"] == "simplecfd"
-    assert metadata["project"]["requires-python"] == ">=3.10"
+    assert metadata["project"]["requires-python"] == ">=3.11"
     assert metadata["project"]["license"] == "MIT"
     assert metadata["project"]["license-files"] == ["LICENSE"]
     assert "numpy>=1.24" in metadata["project"]["dependencies"]

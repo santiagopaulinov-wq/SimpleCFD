@@ -15,10 +15,10 @@ python -m pytest
 ## Continuous Integration
 
 The GitHub Actions workflow in `.github/workflows/ci.yml` runs on every push
-and pull request. It installs the package in editable mode on Python 3.10,
-3.11, and 3.12, verifies the importable package version, checks the primary CLI
-entry points, runs representative solver and analytic-benchmark commands, and
-then executes the full pytest suite.
+and pull request. It installs the package in editable mode on Python 3.11 and
+3.12, verifies the importable package version, checks the primary CLI entry
+points, runs representative solver and analytic-benchmark commands, and then
+executes the full pytest suite.
 
 The analytic benchmark commands are included in CI because they are already
 covered by fast tests and complete in a normal CI budget. They provide useful

@@ -12,7 +12,7 @@ research software engineering practice around pressure-velocity coupling. It
 implements SIMPLE, SIMPLEC, and SIMPLER on a staggered grid, includes analytic
 Poiseuille and Couette verification benchmarks, exports reproducible CSV,
 Markdown, and PNG artifacts, and runs a full pytest suite in GitHub Actions
-across Python 3.10, 3.11, and 3.12.
+across Python 3.11 and 3.12.
 
 ## Two-Minute Technical Explanation
 
@@ -53,7 +53,7 @@ with staggered-grid pressure-velocity coupling. Implemented SIMPLE, SIMPLEC,
 and SIMPLER strategies; reusable case registration; TDMA-based linear solves;
 analytic Poiseuille and Couette verification benchmarks; mesh-refinement error
 studies; reproducible CLI artifact generation; technical documentation; and
-GitHub Actions CI across Python 3.10-3.12.
+GitHub Actions CI across Python 3.11-3.12.
 
 ## LinkedIn Description
 
@@ -92,7 +92,7 @@ GitHub Actions CI.
 - Documentation covering architecture, numerical methods, verification,
   testing, limitations, and developer workflow.
 - CI workflow that installs the package in editable mode and runs full tests
-  on Python 3.10, 3.11, and 3.12.
+  on Python 3.11 and 3.12.
 
 ## Quantitative Achievements
 
@@ -100,7 +100,7 @@ GitHub Actions CI.
   pressure correction, SIMPLE-family iterations, TDMA, benchmarks, reports,
   CLI behavior, dashboard exports, and verification utilities.
 - 273 tests passed in the latest local run on Python 3.12.
-- CI matrix targets 3 supported Python versions: 3.10, 3.11, and 3.12.
+- CI matrix targets 2 supported Python versions: 3.11 and 3.12.
 - 10 registered 1D solver cases are available through the case registry.
 - 3 pressure-velocity coupling methods are exposed by the CLI: SIMPLE,
   SIMPLEC, and SIMPLER.

@@ -76,8 +76,8 @@ large sparse systems, production meshing, or Scientific ML.
 - Public package exports are tested.
 - Tests cover unit behavior, numerical invariants, CLI workflows, generated
   artifacts, and package metadata.
-- GitHub Actions runs an editable install and full test suite on Python 3.10,
-  3.11, and 3.12.
+- GitHub Actions runs an editable install and full test suite on Python 3.11
+  and 3.12.
 - Generated artifacts are structured and reproducible.
 - Documentation is split by architecture, numerical methods, verification,
   testing, limitations, and developer guidance.
@@ -177,7 +177,7 @@ large sparse systems, production meshing, or Scientific ML.
 9. Reproducible CLI artifact generation for CSV, Markdown, JSON, and PNG
    outputs.
 10. GitHub Actions CI validating install, CLI workflows, benchmarks, and tests
-    across Python 3.10-3.12.
+    across Python 3.11-3.12.
 
 ## Ten Future Improvements With Best Professional Return
 
