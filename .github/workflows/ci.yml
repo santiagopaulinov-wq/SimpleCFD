@@ -1,0 +1,53 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: Python ${{ matrix.python-version }}
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10", "3.11", "3.12"]
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+          cache-dependency-path: pyproject.toml
+
+      - name: Install package in editable mode
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -e ".[dev]"
+
+      - name: Verify import and public version
+        run: |
+          python -c "import simplecfd; print(simplecfd.__version__)"
+
+      - name: Verify CLI entry points
+        run: |
+          simplecfd list-cases
+          simplecfd list-methods
+
+      - name: Run representative CLI workflows
+        run: |
+          simplecfd run --case versteeg_6_2 --method simple --scheme upwind --max-iterations 3 --output-dir outputs/ci/run
+          simplecfd poiseuille --output-dir outputs/ci/poiseuille --n-nodes 17
+          simplecfd couette --output-dir outputs/ci/couette --n-nodes 17
+          simplecfd verify-analytic --output-dir outputs/ci/analytic_verification
+
+      - name: Run test suite
+        run: python -m pytest

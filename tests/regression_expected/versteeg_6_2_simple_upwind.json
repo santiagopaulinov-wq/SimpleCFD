@@ -1,0 +1,61 @@
+{
+  "case_name": "versteeg_6_2",
+  "variant": "simple_upwind",
+  "configuration": {
+    "coupling": "simple",
+    "scheme": "upwind",
+    "tolerance": 1e-5,
+    "max_iterations": 100,
+    "pressure_relaxation": 0.7,
+    "velocity_relaxation": 0.7
+  },
+  "expected": {
+    "converged": true,
+    "iterations": 23,
+    "residual": 9.765912092341011e-6,
+    "continuity_residual": 0.0,
+    "momentum_residual": 9.765912092341011e-6,
+    "final_pressure": [
+      10.0,
+      9.004194245993599,
+      8.2506112979705,
+      6.19430740551947,
+      0.0
+    ],
+    "final_velocity": [
+      1.3826797094190517,
+      1.7777310549673522,
+      2.488823476954293,
+      4.148039128257155
+    ],
+    "final_pressure_correction": [
+      0.0,
+      -8.912109567705791e-6,
+      -1.0585411668112237e-5,
+      -3.239305063072329e-5,
+      0.0
+    ],
+    "continuity_residual_vector": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "momentum_residual_vector": [
+      4.2008002543170164e-7,
+      -3.225911090920519e-6,
+      4.00003795020254e-6,
+      -9.765912092341011e-6
+    ]
+  },
+  "tolerances": {
+    "iterations_abs": 0,
+    "residual_rtol": 0.05,
+    "residual_atol": 1e-8,
+    "field_rtol": 1e-8,
+    "field_atol": 1e-10,
+    "residual_vector_rtol": 0.05,
+    "residual_vector_atol": 1e-8
+  }
+}
